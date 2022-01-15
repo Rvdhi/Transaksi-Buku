@@ -2,7 +2,7 @@
 <html>
 <head>
 	<?php include "header.php"; ?>
-	<title>Rekapitulasi Absensi</title>
+	<title>Transaksi Buku</title>
 </head>
 <body><?php include "menu.php"; ?>
 
@@ -23,14 +23,14 @@
 				<?php
 					include "koneksi.php";
 
-					//baca tabel absensi dan relasikan dengan tabel karyawan berdasarkan nomor kartu RFID untuk tanggal hari ini
+					//baca tabel tanskasi, relasikan dengan tabel anggota dan buku berdasarkan nomor kartu RFID untuk tanggal hari ini
 
 					//baca tanggal saat ini
-					date_default_timezone_set('Asia/Makassar');
+					date_default_timezone_set('Asia/Jakarta');
 					$tanggal = date('Y-m-d');
 
 
-					//filter absensi berdasarkan tanggal saat ini
+					//filter transaksi berdasarkan tanggal saat ini
 					$sql = mysqli_query($konek, "select b.nama, a.judul, a.peminjaman, a.pengembalian from absensi a, tansaksi b where a.nokartu=b.nokartu and a.tanggal='$tanggal'");
 
 					$no = 0;
