@@ -48,7 +48,7 @@
 			</tbody>
 		</table>
 
-		<!-- tombol tambah data karyawan -->
+		<!-- tombol tambah data anggota -->
 		<a href="tambah.php"> <button class="btn btn-primary">Tambah Data Anggota</button> </a>
 	</div>
 
